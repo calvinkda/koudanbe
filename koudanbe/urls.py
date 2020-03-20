@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include('koudanbe_cm.urls')),
     #path('', views.home, name='acceuil'),
+    path('cours/', include('cours.urls')),
 ]
 
 

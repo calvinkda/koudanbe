@@ -24,7 +24,7 @@ SECRET_KEY = 'i9k=9pg9$ig0j5wl49q8i1-_uk*pthht)cs8217%2mt+2mkizn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-ALLOWED_HOSTS = ['koudanbecm.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
     DEBUG = False
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'koudanbe_cm',
+    'cours',
 ]
 
 MIDDLEWARE = [

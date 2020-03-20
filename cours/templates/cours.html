@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-content">
+      <h2>Faire <span>la culture</span><br>Africaine</h2>
+      <div>
+        <a href="#about" class="btn-get-started scrollto">Découvrir</a>
+        <a href="#portfolio" class="btn-projects scrollto">Nos Projects</a>
+      </div>
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url({% static 'img/desy/cavalier_nord_cameroun_by_desy.jpg'%});"></div>
+      <div class="item" style="background-image: url({% static 'img/desy/fishing_lagdo_by_desy.jpg'%});"></div>
+      <div class="item" style="background-image: url({% static 'img/desy/gorges_kola_by_desy.jpg'%});"></div>
+      <div class="item" style="background-image: url({% static 'img/desy/peche_lagdo_by_desy.jpg'%});"></div>
+      <div class="item" style="background-image: url({% static 'img/desy/nord_cameroun_by_desy.jpg'%});"></div>
+    </div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="{% static 'img/desy/un_sage_by_desy.jpg' %}" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2>Impacté le monde avec la diversité culturel de nos applications</h2>
+            <h3>Decouvrez des applications et platefromes puissantes et innovantes pour l'évolution du monde et de l'Afrique.</h3>
+
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+
+    </section><!-- #services -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+
+
+    <!--==========================
+      Testimonials Section
+    ============================-->
+    <section id="testimonials" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>titre du cours</h2>
+          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua
+              esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat
+              culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+            <img src="{% static 'img/desy/un_sage_by_desy.jpg' %}" alt="">
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+
+
+
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="wow fadeInUp">
+
+      <!--<div class="container mb-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>-->
+
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="le mot en Moundang et sa signification"></textarea>
+              <div class="validation"></div>
+            </div>
+              <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="le mot en Français et son utilisation"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+{% endblock content %}pyth
