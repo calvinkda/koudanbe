@@ -1,4 +1,5 @@
 {% load static %}
+{% url 'cours' as cours_url %}
 
 <head>
   <meta charset="utf-8">
@@ -8,8 +9,8 @@
   <meta content="" name="description">
    <!-- {% static 'images/{{ image.title }}.png' %}-->
   <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'img/icone site.png' %}" rel="icon">
+  <link href="{% static 'img/icone site.png' %}" rel="apple-touch-icon">
      <!--==========================
     Top Bar
   ============================-->
@@ -25,6 +26,7 @@
         <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
         <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+
       </div>
     </div>
   </section>
@@ -49,6 +51,7 @@
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">l'équipe</a></li>
           <li><a href="#contact">Contact</a></li>
+            <li><a href="{{cours_list_url}}">Cours</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
