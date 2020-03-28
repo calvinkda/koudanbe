@@ -1,8 +1,10 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+from tinymce import models as tinymce_models
 
 User = get_user_model()
+
 
 class TimeStampModel(models.Model):
     created_at = models.DateField(auto_now=False, auto_now_add=True)
@@ -12,11 +14,14 @@ class TimeStampModel(models.Model):
         abstract = True
 
 # Create your models here.
+
+
 class Courses(TimeStampModel):
     title = models.CharField(max_length=100)
     description = models.TextField()
     slug = models.SlugField()
-    category = models.CharField(max_length=8, choices=(('glo', 'Genie Logiciel 2'), ('grh', 'Gestion Des Ressources Humaines 1'), ('math', 'Mathématique 2')))
+    category = models.CharField(max_length=8, choices=(('glo', 'Genie Logiciel 2'), (
+        'grh', 'Gestion Des Ressources Humaines 1'), ('math', 'Mathématique 2')))
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
@@ -31,10 +36,10 @@ class Courses(TimeStampModel):
 
 
 class Classes(TimeStampModel):
-    content = models.TextField()
-    course = models.ForeignKey(Courses, on_delete=models.CASCADE, related_name='classes')
+    content = tinymce_models.HTMLField()
+    course = models.ForeignKey(
+        Courses, on_delete=models.CASCADE, related_name='classes')
 
     class Meta:
         verbose_name = 'Cours'
         verbose_name_plural = 'Cours'
-
