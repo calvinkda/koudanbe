@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 from tinymce import models as tinymce_models
+from ckeditor.fields import RichTextField
 
 User = get_user_model()
 
@@ -36,7 +37,7 @@ class Courses(TimeStampModel):
 
 
 class Classes(TimeStampModel):
-    content = tinymce_models.HTMLField()
+    content = RichTextField()
     course = models.ForeignKey(
         Courses, on_delete=models.CASCADE, related_name='classes')
 

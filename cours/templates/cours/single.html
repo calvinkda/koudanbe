@@ -47,7 +47,7 @@
         <div class="row">
           <div class="col-md-8 blog-content">
             <p class="lead">
-                {{ course.content }}
+                {{ course.classes.first.content|safe }}
             </p>
           </div>
 
