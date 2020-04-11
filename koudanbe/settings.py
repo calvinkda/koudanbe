@@ -117,7 +117,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, '/home/calvinkda/calvinkda.pythonanywhere.com/static')
 ]
 if os.environ.get('ENV') == 'PRODUCTION':
     # Simplified static file serving.
