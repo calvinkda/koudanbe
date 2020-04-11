@@ -19,6 +19,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+#'tinymce',
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -30,7 +31,6 @@ INSTALLED_APPS = [
     'koudanbe_cm',
     'cours.apps.CoursConfig',
     'accounts',
-    #'tinymce',
     'ckeditor',
 ]
 
