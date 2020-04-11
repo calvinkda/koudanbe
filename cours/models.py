@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
-from tinymce import models as tinymce_models
+#from tinymce import models as tinymce_models
 from ckeditor.fields import RichTextField
 
 User = get_user_model()
