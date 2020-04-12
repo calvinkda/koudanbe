@@ -119,19 +119,19 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-if os.environ.get('ENV') == 'PRODUCTION':
+#if os.environ.get('ENV') == 'PRODUCTION':
     # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
     # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-    STATIC_ROOT = '/home/calvinkda/calvinkda.pythonanywhere.com/static/'
+STATIC_ROOT = '/home/calvinkda/calvinkda.pythonanywhere.com/static/'
 
     # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
-    )
+   # STATICFILES_DIRS = (
+        #os.path.join(PROJECT_ROOT, 'static'),
+   # )
 
 #django_heroku.settings(locals())
