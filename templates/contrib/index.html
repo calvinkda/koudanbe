@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+  <!--==========================
+    Intro Section
+  ============================-->
+
+
+  <main id="main">
+
+<section id="contact" class="wow fadeInUp">
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage">Votre contribution a été envoyer. Merci!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" data-rule="minlen:4" data-msg="Entrez un nom de 4 lettres minimun ou ajouter votre prénom" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Votre adresse e-mail" data-rule="email" data-msg="Entrez une e-mail valide" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet (EX: Dictionnaire)" data-rule="minlen:4" data-msg="Entrez un sujet s'il vous plait" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Veuillez remplire cette section" placeholder="le mot en Moundang et sa signification"></textarea>
+              <div class="validation"></div>
+            </div>
+              <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Veuillez remplire cette section" placeholder="le mot en Français et son utilisation"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><a href="thank_you.html"> <button type="submit">Envoyer</button></a></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+</main>
+
+{% endblock content %}

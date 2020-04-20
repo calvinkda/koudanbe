@@ -1,5 +1,8 @@
 {% load static %}
 {% url 'courses:cours' as cours_url %}
+{% url 'contribution:acceuil' as contribution_url %}
+
+
 
 <head>
   <meta charset="utf-8">
@@ -52,6 +55,7 @@
           <li><a href="#team">l'équipe</a></li>
           <li><a href="#contact">Contact</a></li>
             <li><a href="{{cours_url}}">Cours</a></li>
+            <li><a href="{{contribution_url}}">Contribuer</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

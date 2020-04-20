@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'cours.apps.CoursConfig',
     'accounts',
     'ckeditor',
+    'contribution',
 ]
 
 MIDDLEWARE = [
@@ -116,24 +117,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, '/static/'))
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, '/static/'))
 
 #if os.environ.get('ENV') == 'PRODUCTION':
     # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Static files settings
+
+#STATIC_ROOT = 'static'
 
 
-    # Static files settings
+# Static files settings
 #PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-STATIC_ROOT = '/home/calvinkda/calvinkda.pythonanywhere.com/static'
-
-
-
+#STATIC_ROOT = '/home/calvinkda/calvinkda.pythonanywhere.com/static'
     # Extra places for collectstatic to find static files.
-   # STATICFILES_DIRS = (
-        #os.path.join(PROJECT_ROOT, 'static'),
-   # )
+
 
 #django_heroku.settings(locals())

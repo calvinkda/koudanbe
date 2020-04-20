@@ -25,6 +25,7 @@ urlpatterns = [
     path(r'', include('koudanbe_cm.urls')),
     #path('', views.home, name='acceuil'),
     path('cours/', include('cours.urls')),
+    path('contribution/', include('contribution.urls')),
 ]
 
 
