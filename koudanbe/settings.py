@@ -13,13 +13,13 @@ SECRET_KEY = 'i9k=9pg9$ig0j5wl49q8i1-_uk*pthht)cs8217%2mt+2mkizn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://koudanbe.herokuapp.com/', '127.0.0.1']
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
 
 # Application definition
-#'tinymce',
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'accounts',
     'ckeditor',
     'contribution',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -132,10 +133,14 @@ STATICFILES_DIRS = [
 #STATIC_ROOT = 'static'
 
 
+
 # Static files settings
-#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #STATIC_ROOT = '/home/calvinkda/calvinkda.pythonanywhere.com/static'
     # Extra places for collectstatic to find static files.
+
 
 
 #django_heroku.settings(locals())

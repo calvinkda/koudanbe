@@ -26,6 +26,7 @@ urlpatterns = [
     #path('', views.home, name='acceuil'),
     path('cours/', include('cours.urls')),
     path('contribution/', include('contribution.urls')),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 

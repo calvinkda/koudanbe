@@ -8,5 +8,6 @@ urlpatterns = [
 
     path('', views.CoursesListView.as_view(), name='cours'),
     path('<int:pk>/', views.CoursesDetailView.as_view(), name='details'),
+    path('tinymce/', include('tinymce.urls')),
 
 ]
